@@ -34,8 +34,11 @@ composer
       `<b>Stats for @${(await ctx.api.getMe()).username}</b>
       
 <b>Total users</b>: ${await countUsers()}
-<b>Chats with modified settings</b>: ${(await getAllSettings()).length},
+<b>Chats with modified settings</b>: ${(await getAllSettings()).length}
+<b>Total Users Seen (Approved/Disapproved)</b>: ${helperClass.TOTAL_USERS_SEEN}
+<b>Uptime</b>: ${uptime}
 
+<b><a href="https://github.com/xditya/ChannelActionsueueBot">Repository</a> | <a href="https://t.me/Botzhhehe7373838Hub">Channel</a> | <a href="https://t.me/Boteie73838heheejzHubChat">Support</a></b>`,
       { parse_mode: "HTML", disable_web_page_preview: true },
     );
   });
@@ -60,7 +63,6 @@ composer
         "Please reply to a message to broadcast.",
       );
     }
-
     // use curosr to avoid memory issues
     // and maybe prevent broadcast from
     // blocking the main process
